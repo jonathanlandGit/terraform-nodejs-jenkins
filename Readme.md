@@ -32,4 +32,6 @@ variable "private_key" {
 
 4. Setup Jenkins -> install bitbucket plugin 
 
+5. Test the app
+
 
