@@ -32,6 +32,10 @@ variable "private_key" {
 
 4. Setup Jenkins -> install bitbucket plugin 
 
-5. Test the app //
+5. Enter ubuntu shell again and install aws cli
+```
+ubuntu@ip-10-0-1-64:~$ sudo apt install awscli
+```
+6. May need to setup aws creds
 
 
