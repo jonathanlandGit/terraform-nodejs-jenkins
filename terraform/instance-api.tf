@@ -4,7 +4,7 @@ provider "aws" {
 
 data "template_file" "api-shell-script" {
   template = file("scripts/user-data-api.sh")
-  vars {
+  vars = {
     PASSWORD    = var.RDS_PASSWORD
     DB_HOSTNAME = aws_db_instance.postgres.address
     PORT        = var.API_PORT
@@ -28,7 +28,7 @@ resource "aws_security_group" "api-instance" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags {
+  tags = {
     Name = "example-instance"
   }
 }

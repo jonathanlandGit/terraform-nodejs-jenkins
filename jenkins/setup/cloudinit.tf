@@ -1,6 +1,6 @@
 data "template_file" "jenkins-init" {
   template = file("init/jenkins-init.sh")
-  vars {
+  vars = {
     DEVICE            = var.INSTANCE_DEVICE_NAME
     JENKINS_VERSION   = var.JENKINS_VERSION
     TERRAFORM_VERSION = var.TERRAFORM_VERSION

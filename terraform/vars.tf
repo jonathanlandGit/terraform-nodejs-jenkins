@@ -15,10 +15,13 @@ variable "AWS_REGION" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "mykey"
+  # default = "mykey"
+  default = " /Users/jonathanland/.ssh/blah.pem"
+  # default = "~/.ssh/MyKeyPair.pem"
 }
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "mykey.pub"
+  # default = "mykey.pub"
+  default = "/Users/jonathanland/.ssh/blah.pub"
 }
 
 
