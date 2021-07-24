@@ -22,7 +22,8 @@ resource "aws_launch_configuration" "api-launchconfig" {
 resource "aws_autoscaling_group" "api-autoscaling" {
   name = "${aws_launch_configuration.api-launchconfig.name}-asg"
 
-  vpc_zone_identifier       = ["${aws_subnet.main-public-1.id}"]
+  # vpc_zone_identifier       = ["${aws_subnet.main-public-1.id}"]
+  vpc_zone_identifier       = ["subnet-34bcc152"]
   launch_configuration      = aws_launch_configuration.api-launchconfig.name
   min_size                  = 2
   max_size                  = 2

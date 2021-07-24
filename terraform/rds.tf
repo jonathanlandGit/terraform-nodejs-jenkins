@@ -1,7 +1,7 @@
 resource "aws_db_subnet_group" "postgres-subnet" {
   name        = "postgres-subnet"
   description = "RDS subnet group"
-  subnet_ids  = ["${aws_subnet.main-private-1.id}", "${aws_subnet.main-private-2.id}"]
+  subnet_ids  = ["subnet-34bcc152", "subnet-60641f41"]
 }
 
 resource "aws_db_parameter_group" "postgres-parameters" {
