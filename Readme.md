@@ -44,5 +44,5 @@ ubuntu@ip-10-0-1-64:~$ sudo apt install awscli
 packer build -machine-readable packer-ami-api.json
 ```
 
-8. Verify the code change 
+8. Verify the code change  //
 
