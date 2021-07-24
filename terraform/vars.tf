@@ -24,7 +24,18 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "/Users/jonathanland/.ssh/blah.pub"
 }
 
+variable "vpc_id" {
+  default = "vpc-7aef6607"
+}
 
+variable "subnets" {
+  type    = list(string)
+  default = ["subnet-34bcc152", "subnet-60641f41", "subnet-0aa7aa47"]
+}
+
+# variable "subnets" {
+#   default = "subnet-34bcc152"
+# }
 variable "AMIS" {
   type = map(string)
   default = {

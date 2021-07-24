@@ -1,6 +1,6 @@
 resource "aws_elb" "api-elb" {
   name            = "api-elb"
-  subnets         = ["${aws_subnet.main-public-1.id}"]
+  subnets         = var.subnets
   security_groups = ["${aws_security_group.elb-securitygroup.id}"]
   listener {
     instance_port     = var.API_PORT
@@ -26,7 +26,9 @@ resource "aws_elb" "api-elb" {
 
 
 resource "aws_security_group" "elb-securitygroup" {
-  vpc_id      = aws_vpc.main.id
+  # vpc_id      = aws_vpc.main.id
+  vpc_id = var.vpc_id
+
   name        = "elb"
   description = "security group for load balancer"
   egress {

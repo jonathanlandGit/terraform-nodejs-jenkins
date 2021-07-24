@@ -12,7 +12,9 @@ data "template_file" "api-shell-script" {
 }
 
 resource "aws_security_group" "api-instance" {
-  vpc_id      = aws_vpc.main.id
+  # vpc_id      = aws_vpc.main.id
+  vpc_id = var.vpc_id
+
   name        = "allow-ssh"
   description = "security group that allows all egress traffic"
   egress {

@@ -38,4 +38,9 @@ ubuntu@ip-10-0-1-64:~$ sudo apt install awscli
 ```
 6. May need to setup aws creds
 
+7. Packer build
+
+```
+packer build -machine-readable packer-ami-api.json
+```
 

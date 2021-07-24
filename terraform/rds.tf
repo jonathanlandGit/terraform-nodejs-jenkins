@@ -35,7 +35,9 @@ resource "aws_db_instance" "postgres" {
 }
 
 resource "aws_security_group" "allow-postgresdb" {
-  vpc_id      = aws_vpc.main.id
+  # vpc_id      = aws_vpc.main.id
+  vpc_id = var.vpc_id
+
   name        = "allow-postgresdb"
   description = "allow-postgresdb"
   ingress {
